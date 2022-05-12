@@ -1,0 +1,14 @@
+{
+  "name": "access_js",
+  "version": "1.0.0",
+  "description": "A test project to validate a concept of using javascript for oop",
+  "main": "main.js",
+  "type": "module",
+  "scripts": {
+    "functional": "node ./functional/main.js",
+    "oop-this": "node ./oop-this/main.js",
+    "oop-prototype": "node ./oop-prototype/main.js"
+  },
+  "author": "Felix Bay",
+  "license": "ISC"
+}
