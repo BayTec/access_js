@@ -7,7 +7,8 @@
   "scripts": {
     "functional": "node ./functional/main.js",
     "oop-this": "node ./oop-this/main.js",
-    "oop-prototype": "node ./oop-prototype/main.js"
+    "oop-prototype": "node ./oop-prototype/main.js",
+    "oop-class": "node ./oop-class/main.js"
   },
   "author": "Felix Bay",
   "license": "ISC"
