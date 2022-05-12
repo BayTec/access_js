@@ -1,5 +1,6 @@
 'use strict'
 
+import * as fs from "fs";
 import { Access } from "./Access/Access.js";
 import { AccessCreator } from "./AccessCreator/AccessCreator.js";
 import { ActiveAccessCreator } from "./AccessCreator/ActiveAccessCreator.js";
@@ -8,6 +9,12 @@ import { AccessRemover } from "./AccessRemover/AccessRemover.js";
 
 function main() {
     const jsonPath = './data/data.json'
+
+    if(!fs.existsSync('./data')){
+        fs.mkdirSync('./data')
+    }
+
+    fs.writeFileSync(jsonPath, '[]')
 
     const creator = new AccessCreator(jsonPath)
     const validAccess = creator.create()
