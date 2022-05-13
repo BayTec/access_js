@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "A test project to validate a concept of using javascript for oop",
   "main": "main.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "functional": "node ./functional/main.js",
     "oop-this": "node ./oop-this/main.js",
     "oop-prototype": "node ./oop-prototype/main.js",
-    "oop-class": "node ./oop-class/main.js"
+    "oop-class": "node ./oop-class/main.js",
+    "typescript": "tsc && node ./typescript/build/main.js"
   },
   "author": "Felix Bay",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^17.0.33"
+  }
 }
