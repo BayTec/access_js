@@ -1,8 +1,8 @@
 'use strict'
 
-import * as fs from "fs";
+const fs = require('fs');
 
-export class AccessRemover {
+class AccessRemover {
     constructor(path) {
         this.path = path;
     }
@@ -22,3 +22,5 @@ export class AccessRemover {
         fs.writeFileSync(this.path, json)
     }
 }
+
+module.exports = AccessRemover

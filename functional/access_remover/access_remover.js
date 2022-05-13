@@ -1,8 +1,8 @@
 'use strict'
 
-import * as fs from "fs";
+const fs = require('fs');
 
-export const accessRemover = function (path) {
+const accessRemover = function (path) {
     const remove = function(access) {
         let json = fs.readFileSync(path)
 
@@ -24,3 +24,5 @@ export const accessRemover = function (path) {
         remove
     }
 }
+
+module.exports = accessRemover

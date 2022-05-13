@@ -1,8 +1,8 @@
 'use strict'
 
-import * as fs from "fs";
+const fs = require('fs')
 
-export const activeAccess = function (path, access) {
+const activeAccess = function (path, access) {
     const activate = function() {
         let json = fs.readFileSync(path);
         let data = JSON.parse(json);
@@ -61,3 +61,5 @@ export const activeAccess = function (path, access) {
         access: activeAccess
     }
 }
+
+module.exports = activeAccess

@@ -1,8 +1,8 @@
 'use strict'
 
-import * as fs from "fs";
+const fs = require('fs');
 
-export class Access {
+class Access {
     constructor(path, key) {
         this.path = path;
         this.key = key;
@@ -26,3 +26,5 @@ export class Access {
         return false
     }
 }
+
+module.exports = Access

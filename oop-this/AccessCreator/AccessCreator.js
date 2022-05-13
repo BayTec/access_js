@@ -1,9 +1,9 @@
 'use strict'
 
-import * as fs from "fs";
-import { Access } from "../Access/Access.js";
+const fs = require('fs');
+const Access = require('../Access/Access.js');
 
-export const AccessCreator = function (path) {
+const AccessCreator = function (path) {
     this.create = function () {
         const randomKey = function(length) {
             const charset = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -52,3 +52,5 @@ export const AccessCreator = function (path) {
         return new Access(path, key)
     }
 }
+
+module.exports = AccessCreator

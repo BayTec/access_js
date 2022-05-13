@@ -1,10 +1,10 @@
 'use strict'
 
-import * as fs from "fs";
-import { Access } from "./Access/Access.js";
-import { AccessCreator } from "./AccessCreator/AccessCreator.js";
-import { ActiveAccessCreator } from "./AccessCreator/ActiveAccessCreator.js";
-import { AccessRemover } from "./AccessRemover/AccessRemover.js";
+const fs = require('fs');
+const Access = require('./Access/Access.js');
+const AccessCreator = require('./AccessCreator/AccessCreator.js');
+const ActiveAccessCreator = require('./AccessCreator/ActiveAccessCreator.js');
+const AccessRemover = require('./AccessRemover/AccessRemover.js');
 
 
 function main() {

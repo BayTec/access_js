@@ -1,8 +1,8 @@
 'use strict'
 
-import { ActiveAccess } from "../Access/ActiveAccess.js";
+const ActiveAccess = require('../Access/ActiveAccess.js');
 
-export class ActiveAccessCreator {
+class ActiveAccessCreator {
     constructor(path, accessCreator) {
         this.path = path;
         this.accessCreator = accessCreator;
@@ -16,3 +16,5 @@ export class ActiveAccessCreator {
         return access;
     }
 }
+
+module.exports = ActiveAccessCreator

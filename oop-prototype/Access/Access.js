@@ -1,8 +1,8 @@
 'use strict'
 
-import * as fs from "fs";
+const fs = require('fs');
 
-export const Access = function (path, key) {
+const Access = function (path, key) {
     this.path = path;
     this.key = key;
 }
@@ -24,3 +24,5 @@ Access.prototype.access = function() {
 
     return false
 }
+
+module.exports = Access

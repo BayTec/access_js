@@ -1,8 +1,8 @@
 'use strict'
 
-import * as fs from "fs";
+const fs = require('fs');
 
-export const AccessRemover = function (path) {
+const AccessRemover = function (path) {
     this.path = path;
 }
 
@@ -20,3 +20,5 @@ AccessRemover.prototype.remove = function(access) {
     json = JSON.stringify(data)
     fs.writeFileSync(this.path, json)
 }
+
+module.exports = AccessRemover

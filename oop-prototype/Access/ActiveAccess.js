@@ -1,8 +1,8 @@
 'use strict'
 
-import * as fs from "fs";
+const fs = require('fs');
 
-export const ActiveAccess = function (path, parent) {
+const ActiveAccess = function (path, parent) {
     this.path = path;
     this.parent = parent;
 }
@@ -53,3 +53,5 @@ ActiveAccess.prototype.access = function() {
 
     return false;
 }
+
+module.exports = ActiveAccess

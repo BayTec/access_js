@@ -1,8 +1,8 @@
 'use strict'
 
-import * as fs from "fs";
+const fs = require('fs');
 
-export class ActiveAccess {
+class ActiveAccess {
     constructor(path, parent) {
         this.path = path;
         this.parent = parent;
@@ -55,3 +55,5 @@ export class ActiveAccess {
         return false;
     }
 }
+
+module.exports = ActiveAccess
